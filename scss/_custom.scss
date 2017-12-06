@@ -1,0 +1,21 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+@import "bootstrap";
+
+$black:#000;
+$black-light:#666;
+$black-lighter:#999;
+$black-lightest:#ccc;
+$white:#fff;
+$orange-dark:#FF6332;
+$orange:#FF6332;
+
+
+$font-size-root:100px;
+$line-height-base: 1;
+
+$tabbar-height:.49rem;
+$navbar-height:$tabbar-height;
+$zindex-tabbar:$zindex-navbar;

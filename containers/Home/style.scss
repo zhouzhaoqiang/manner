@@ -1,0 +1,92 @@
+
+@import "../../scss/custom";
+@import "../../scss/mixins";
+
+.home{
+  background-color: #eee;
+  font-size:.14rem;
+  padding-bottom: .49rem;
+  .banner{
+    .item img{
+      width: 100%;
+    }
+  }
+  .cates-box{
+    width: 100%;
+    padding: .1rem;
+    margin:0;
+    background-color: $white;
+    .cate-item{
+      float: left;
+      width: 20%;
+      text-align: center;
+      padding: .1rem 0;
+    }
+    .image{
+      width: .49rem;
+      height: .49rem;
+    }
+    .title{
+      margin-top: .1rem;
+      display: block;
+    }
+  }
+  .special{
+    padding: .12rem;
+    margin-top: .1rem;
+    background-color: $white;
+  }
+  .goods-list{
+    .goods-item{
+      width: 1.7rem;
+      float: left;
+      border:1px solid #eee;
+      margin-top: .1rem;
+      &:nth-child(even){
+        margin-left: .1rem;
+      }
+      .image{
+        width: 100%;
+        height: 1.7rem;
+      }
+      .desc{
+        padding: .1rem;
+        display: block;
+        font-size: .09rem;
+      }
+      .name{
+        height: 2em;
+        display: block;
+        margin:.08rem 0;
+        font-size: .11rem;
+      }
+      .price{
+        font-size: .12rem;
+        color:#FF6332;
+      }
+      .pay-btn{
+        float: right;
+        width: .43rem;
+        height: .18rem;
+        background-color:#FF6332;
+        font-size: .11rem;
+        color:$white;
+        line-height: .18rem;
+        text-align: center;
+        border-radius:.5rem;
+      }
+      .amount{
+        display: block;
+        margin-top:.08rem;
+      }
+    }
+  }
+  .recommend{
+    padding: .12rem;
+    background-color: $white;
+    .cate-image{
+      width: 100%;
+      height: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+
+
+@import "../../scss/custom";
+@import "../../scss/mixins";
+
+
+.account-box{
+  font-size: .16rem;
+  .account-header{
+    position: relative;
+    height: 2.1rem;
+    background-color: $orange;
+    text-align: center;
+    color:$white;
+    i{
+      position: absolute;
+      top:.1rem;
+      right:.1rem;
+    }
+    .avatar{
+      display: inline-block;
+      margin-top: .6rem;
+      img{
+        height: .94rem;
+        border-radius: .5rem;
+      }
+      h4{
+        margin-top: .1rem;
+        font-weight: normal;
+      }
+    }
+  }
+  .menu-list{
+    border-top:1px solid $black-lightest;
+    border-bottom:1px solid $black-lightest;
+    padding: 0 .1rem;
+    background-color: $white;
+    .item{
+      position: relative;
+      height: .6rem;
+      line-height: .6rem;
+      border-bottom:1px solid $black-lightest;
+      &:last-child{
+        border-bottom:none;
+      }
+      a{
+        display: block;
+      }
+      .right{
+        position: absolute;
+        right:0;
+        top:.2rem;
+      }
+      .title{
+        margin-left: .2rem;
+        color:$black;
+      }
+      .text{
+        float: right;
+        margin-right: .3rem;
+        color:red;
+      }
+    }
+  }
+}

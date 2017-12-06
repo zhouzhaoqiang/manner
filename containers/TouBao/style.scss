@@ -1,0 +1,14 @@
+
+@import "../../scss/custom";
+@import "../../scss/mixins";
+
+.toubao-box{
+  width: 100%;
+  font-size: .18rem;
+  overflow: scroll;
+  padding: .1rem;
+  .toubao-img{
+    width: 100%;
+    margin-bottom: .49rem;
+  }
+}

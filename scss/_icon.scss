@@ -1,0 +1,203 @@
+@mixin t-icon {
+  width: .18rem;
+  height: .18rem;
+  display: inline-block;
+  // border:1px solid red;
+  /* margin-top: 5px; */
+  margin-bottom: -.05rem;
+  background-size: .12rem;
+}
+
+.t-icon-key{
+  background: url("../imgs/key.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  background-size: .18rem;
+  width: .23rem;
+  height: .21rem;
+}
+
+.t-icon-phone{
+  background: url("../imgs/phone.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .24rem;
+}
+
+.t-icon-user{
+  background: url("../imgs/user.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  background-size: .18rem;
+  width: .22rem;
+  height: .22rem;
+}
+
+.t-icon-package{
+  background: url("../imgs/package.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .23rem;
+  width: .23rem;
+  background-size: .18rem;
+}
+.t-icon-me{
+  background: url("../imgs/me.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .23rem;
+  width: .23rem;
+  background-size: .18rem;
+}
+.t-icon-toubao{
+  background: url("../imgs/toubao.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .23rem;
+  width: .23rem;
+  background-size: .18rem;
+}
+.t-icon-angle-left{
+  background: url("../imgs/angle-left.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+}
+.t-icon-arrow-down{
+  background: url("../imgs/arrow-down-active.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+}
+.t-icon-address{
+  background: url("../imgs/address.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+}
+.t-icon-arrow-right{
+  background: url("../imgs/arrow-right.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .17rem;
+  width: .13rem;
+  background-size: .09rem;
+}
+.t-icon-wechat-success{
+  background: url("../imgs/wechat-success.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .28rem;
+  width: .28rem;
+  background-size: .26rem;
+}
+.t-icon-setting{
+  background: url("../imgs/setting.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .21rem;
+  width: .21rem;
+  background-size: .2rem;
+}
+
+.t-icon-apackage{
+  background: url("../imgs/apackage.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .22rem;
+  width: .22rem;
+  background-size: .2rem;
+}
+.t-icon-acard{
+  background: url("../imgs/acard.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .22rem;
+  width: .22rem;
+  background-size: .2rem;
+}
+.t-icon-aquestion{
+  background: url("../imgs/aquestion.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .22rem;
+  width: .22rem;
+  background-size: .2rem;
+}
+.t-icon-user-dark{
+  background: url("../imgs/user-dark.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .22rem;
+  width: .22rem;
+  background-size: .18rem;
+}
+.t-icon-phone-dark{
+  background: url("../imgs/phone-drak.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .22rem;
+  width: .22rem;
+  background-size: .15rem;
+}
+.t-icon-address-dark{
+  background: url("../imgs/address-dark.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .22rem;
+  width: .22rem;
+  background-size: .15rem;
+}
+.t-icon-delete-red{
+  background: url("../imgs/delete-red.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .22rem;
+  width: .22rem;
+  background-size: .2rem;
+}
+.t-icon-address-circle{
+  background: url("../imgs/address-circle.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .22rem;
+  width: .22rem;
+  background-size: .15rem;
+}
+.t-icon-email{
+  background: url("../imgs/email.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .22rem;
+  width: .22rem;
+  background-size: .16rem;
+}
+
+.t-icon-home{
+  background: url("../imgs/index.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .28rem;
+  width: .28rem;
+  background-size: .20rem;
+  margin-bottom: -.08rem;
+}
+
+.t-icon-search{
+  background: url("../imgs/search.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+}
+
+.t-icon-points{
+  background: url("../imgs/apoint.png") no-repeat scroll 50% 50%;
+  @include t-icon;
+  height: .22rem;
+  width: .22rem;
+  background-size: .18rem;
+}
+
+.t-icon-apolicies{
+  position: relative;
+  @include t-icon;
+  height: .22rem;
+  width: .22rem;
+  background-color: #535353;
+  border-radius: 2px;
+  &::before{
+    position: absolute;
+    content:'保';
+    top:0;
+    left:.04rem;
+    line-height: .22rem;
+    color:$white;
+    font-size: .14rem;
+    font-style: normal;
+  }
+}
+
+.active{
+  .t-icon-package{
+    background-image: url("../imgs/package-active.png");
+  }
+  .t-icon-me{
+    background-image: url("../imgs/me-active.png");
+  }
+  .t-icon-toubao{
+    background-image: url("../imgs/toubao-active.png");
+  }
+}

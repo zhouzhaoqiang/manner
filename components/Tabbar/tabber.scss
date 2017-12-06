@@ -1,0 +1,51 @@
+@import "../../scss/custom";
+@import "../../scss/mixins";
+
+
+.tabbar{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom:0;
+  font-size: .09rem;
+  background-color: $white;
+  border-top:1px solid $gray-lighter;
+  height: $tabbar-height;
+  line-height: $tabbar-height;
+  z-index: $zindex-tabbar;
+  .tabbar-tab{
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding:0;
+    li{
+      flex: 1;
+      float: none;
+      text-align: center;
+      list-style: none;
+      padding: .05rem 0;
+      a{
+        display: inline-block;
+        width: 100%;
+        height: $tabbar-height;
+        line-height: 20px;
+        color: $gray;
+        text-decoration: none;
+      }
+      .tabbar-label{
+        padding-top: 2px;
+        line-height: 1;
+        font-size: .09rem;
+        display: block;
+        word-wrap: normal;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      &.active a{
+        color: $orange-dark;
+      }
+    }
+  }
+}

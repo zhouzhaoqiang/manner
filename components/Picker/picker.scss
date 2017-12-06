@@ -1,0 +1,124 @@
+.picker-container {
+  z-index: 10001;
+  width: 100%;
+  &, *, *:before, *:after {
+    box-sizing: border-box;;
+  }
+  .picker-inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 0 .2rem;
+    font-size: .15rem;
+    -webkit-mask-box-image: linear-gradient(to top, transparent, transparent 5%, white 20%, white 80%, transparent 95%, transparent);
+  }
+
+  .picker-column {
+    flex: 1 1;
+    position: relative;
+    max-height: 100%;
+    overflow: hidden;
+    text-align: center;
+    .picker-scroller {
+      transition: 300ms;
+      transition-timing-function: ease-out;
+    }
+
+    .picker-item {
+      position: relative;
+      padding: 0 .1rem;
+      white-space: nowrap;
+      color: #999999;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &.picker-item-selected {
+        color: #222;
+      }
+    }
+  }
+
+  .picker-highlight {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    &:before, &:after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      right: auto;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #d9d9d9;
+      transform: scaleY(0.5);
+    }
+
+    &:before {
+      top: 0;
+      bottom: auto;
+    }
+
+    &:after {
+      bottom: 0;
+      top: auto;
+    }
+  }
+}
+
+.picker-modal-mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.picker-modal {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+
+  width: 100%;
+
+  background-color: #efeff4;
+
+  transform: translate(0, 100%);
+  backface-visibility: hidden;
+  transition: transform .3s;
+
+  &.picker-modal-toggle {
+    transform: translate(0, 0);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: .4rem;
+    padding: 0 .15rem;
+
+    background-color: #fbf9fe;
+
+    .title {
+      flex: 1 1;
+      color: #888;
+    }
+
+    a {
+      text-decoration: none;
+      color: #04BE02;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  }
+}

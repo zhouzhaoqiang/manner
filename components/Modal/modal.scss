@@ -1,0 +1,64 @@
+.modal-container{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 1100;
+  display: none;
+  .modal-overlay{
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.2);
+    transition: opacity .4s;
+    opacity: 0;
+  }
+  .modal-inner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: auto;
+  }
+  .model{
+    position: relative;
+    margin: 2rem auto;
+    width: 7rem;
+    max-width: 90%;
+  }
+  .close-btn{
+    position: absolute;
+    right:0;
+    width: .4rem;
+    height: .4rem;
+    &::before{
+      position: absolute;
+      content: ' ';
+      left:.2rem;
+      top:.1rem;
+      width: 1px;
+      transform: rotate(45deg);
+      height: 20px;
+      background-color:#000;
+    }
+    &::after{
+      position: absolute;
+      content: ' ';
+      left:.2rem;
+      top:.1rem;
+      width: 1px;
+      transform: rotate(-45deg);
+      height: 20px;
+      background-color:#000;
+    }
+  }
+  &.active{
+    display: block;
+    .modal-overlay{
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+
+@import "../../scss/custom";
+@import "../../scss/mixins";
+
+.footer{
+  position: fixed;
+  width: 100%;
+  left:0;
+  bottom:0;
+  height: .49rem;
+  line-height: .49rem;
+  text-align: center;
+  display: flex;
+  border-top:1px solid #CFCFCF;
+  font-size: .12rem;
+  background-color: #F7F7F7;
+  z-index: 1000;
+  .home{
+    width: .45rem;
+    background-color: #F7F7F7;
+  }
+  .item{
+    flex:1;
+    border-left:1px solid #CFCFCF;
+  }
+}

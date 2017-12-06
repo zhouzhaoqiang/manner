@@ -1,0 +1,1360 @@
+
+@import "custom";
+@import "normalize";
+@import "mixins";
+
+
+@import "reboot";
+@import "icon";
+@import "slider";
+@import "picker";
+@import "switch";
+
+html {
+  box-sizing: border-box;
+}
+
+
+.cardenter{
+  width: 100%;
+  max-width: 100%;
+  //margin-top:.1rem;
+}
+.margin-top-nar{
+  margin-top: .3rem;
+}
+
+.vip-top-img{
+   height: 2rem;
+   width: 100%;
+}
+.vip-top-text-panel{
+  background-color: #FFF1D9;
+  margin-bottom: -.1rem;
+  padding: .11rem 0;
+  padding-left: .1rem;
+  bottom: 0;
+}
+.vip-top-text{
+  font-size: .09rem;
+}
+
+#root{
+  font-size: .14rem;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1477276747_6828716.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1477276747_6828716.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1477276747_6828716.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1477276747_6828716.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1477276747_6828716.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+
+.iconfont{font-family:"iconfont";
+font-size:16px;font-style:normal;}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+@at-root {
+  @-ms-viewport { width: device-width; }
+}
+
+html {
+  // Sets a specific default `font-size` for user with `rem` type scales.
+  font-size: $font-size-root;
+  // As a side-effect of setting the @viewport above,
+  // IE11 & Edge make the scrollbar overlap the content and automatically hide itself when not in use.
+  // Unfortunately, the auto-showing of the scrollbar is sometimes too sensitive,
+  // thus making it hard to click on stuff near the right edge of the page.
+  // So we add this style to force IE11 & Edge to use a "normal", non-overlapping, non-auto-hiding scrollbar.
+  // See https://github.com/twbs/bootstrap/issues/18543
+  -ms-overflow-style: scrollbar;
+  // Changes the default tap highlight to be completely transparent in iOS.
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+body {
+  // Make the `body` use the `font-size-root`
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  // Go easy on the eyes and use something other than `#000` for text
+  color: $body-color;
+  // By default, `<body>` has no `background-color` so we set one as a best practice.
+  background-color: $body-bg;
+}
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+input,button{
+  outline:none;
+}
+ul,li{
+  list-style: none;
+  padding: 0;
+  margin:0;
+}
+a,a:link,a:hover{
+  text-decoration: none;
+  color:inherit;
+}
+
+.hide{
+  display: none !important;
+}
+
+.bg-orange{
+  background-color: $orange-dark;
+}
+
+.bg-gray-lighter{
+  background-color: $gray-lightest;
+  color:$black !important;
+}
+
+.fixed-header-top{
+  position: fixed;
+  top:0;
+  width: 100%;
+  background-color: rgba(0,0,0,0);
+  z-index: 1010;
+}
+
+
+.wrapper,#wrapper{
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  .divFh{
+      .divFh_text{
+        width:100% !important;
+        margin-bottom:0 !important;
+        font: 16px/88px '微软雅黑' !important;
+        text-indent: 1em !important;
+        color: #fff !important;
+        background:#ff7e00   url(//gw.alicdn.com/tfscom/TB1GDQsIVXXXXcmapXXzKkNQpXX-300-200.png)no-repeat 90% center;background-size: auto 100% !important;
+      }
+      .divFh_box{
+        display: flex;
+      .divFh_right{
+        flex: 1;
+        padding: 15px 10px 15px 0;
+        margin-bottom:0 !important;
+        .divFh_right_top{
+          margin-bottom:0 !important;
+          overflow: hidden;
+          .sp1{
+            float: left;
+            margin-bottom:0 !important;
+            font: 16px/28px '微软雅黑' !important;
+            color: #555 !important;
+          }
+          .sp2{
+            float: right;
+            margin-bottom:0 !important;
+            font: 16px/28px '微软雅黑' !important;
+            color: #555 !important;
+          }
+        }
+        .divFh_right_bottom{
+          margin-bottom:0 !important;
+          width: 100%;
+          height: auto;
+          color: #555 !important;
+          font: 16px/28px '微软雅黑' !important;
+        }
+      }
+      .divFh_left{
+        width: 60px;
+        text-align: center;
+        position: relative;
+        i{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -10px;
+          margin-top: -12px;
+          color: #555;
+          font-size: 24px;
+          line-height:24px;
+        }
+      }
+    }
+  }
+  .logistics_details{
+    .logistics_company{
+      border-top: 1px solid #ccc;
+      width:100% !important;
+      margin-bottom:0 !important;
+      font: 16px/50px '微软雅黑' !important;
+      text-indent: 1em !important;
+      color: #555 !important;
+    }
+    .logistics_details_con{
+      margin-left: 20px;
+      .logistics_details_con_0{
+        display: flex;
+        .logistics_details_con_0_left{
+          padding: 20px 0;
+          height: 100%;
+          position: relative;
+          width: 40px;
+          margin-bottom:0 !important;
+          font: 14px/24px '微软雅黑' !important;
+          color: #555;
+          i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -8px;
+            margin-top: -12px;
+          }
+        }
+        .logistics_details_con_0_right{
+          padding: 10px 10px 10px 0;
+          flex: 1;
+          margin-bottom:0 !important;
+          font: 14px/24px '微软雅黑' !important;
+          .logistics_details_con_0_right_test{
+            margin-bottom:0 !important;
+            font: 14px/24px '微软雅黑' !important;
+            color: #555;
+            word-break:break-all;
+          }
+        }
+        &:nth-child(1){
+          .logistics_details_con_0_left{
+            color: red;
+          }
+          .logistics_details_con_0_right{
+            color: red;
+            .logistics_details_con_0_right_test{
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-default{
+  height: 2.2rem;
+  background: $white;
+  box-shadow: 1px 8px 13px 0 rgba(0,0,0,.5);
+  .modal-header{
+    height: .4rem;
+    border-bottom:1px solid $black-lightest;
+    font-size: .16rem;
+    text-align: center;
+    line-height: .4rem;
+  }
+}
+
+.reg-box{
+  font-size:.15rem;
+  background-image: url(/imgs/bg.jpg);
+  background-size: cover;
+  .logo{
+    height: 2.2rem;
+    text-align: center;
+    line-height: 2.2rem;
+    img{
+      width: 1rem;
+    }
+  }
+  .form-box{
+    text-align: center;
+    .input-box{
+      position: relative;
+      display: inline-block;
+      border-radius: 3px;
+      width: 3rem;
+      height: .5rem;
+      background: rgba(0,0,0,.4);
+      margin-bottom: .1rem;
+      i{
+        position: absolute;
+        top:.13rem;
+        left:.14rem;
+      }
+      input{
+        position: absolute;
+        padding-left: .46rem;
+        padding-right: 1rem;
+        background: rgba(0,0,0,0);
+        color:$white;
+        top:0;
+        left:0;
+        height: .5rem;
+        width: 3rem;
+        border:none;
+      }
+      .ycode{
+        position: absolute;
+        background: inherit;
+        opacity: .57;
+        right: 0;
+        width: 1rem;
+        height: inherit;
+        border:none;
+        border-radius: 3px;
+        color:$orange-dark;
+      }
+    }
+    .reg-btn{
+      color:$white;
+      width: 3rem;
+      height: .5rem;
+      margin-top: .58rem;
+      background: $orange-dark;
+      border-radius: .4rem;
+      border:none;
+    }
+  }
+}
+
+.login-box{
+  font-size:.15rem;
+  background-image: url(/imgs/bg.jpg);
+  background-size: cover;
+  .logo{
+    height: 2.2rem;
+    text-align: center;
+    line-height: 2.2rem;
+    img{
+      width: 1rem;
+    }
+  }
+  .form-box{
+    text-align: center;
+    .error{
+      color:$brand-danger;
+      width: 3rem;
+      text-align: left;
+      /* display: inline-block; */
+      margin: 0 auto;
+      margin-bottom:.05rem;
+    }
+    .input-box{
+      position: relative;
+      display: inline-block;
+      border-radius: 3px;
+      width: 3rem;
+      height: .5rem;
+      background: rgba(0,0,0,.4);
+      margin-bottom: .1rem;
+      i{
+        position: absolute;
+        top:.13rem;
+        left:.14rem;
+      }
+      input{
+        position: absolute;
+        padding-left: .46rem;
+        padding-right: 1rem;
+        background: rgba(0,0,0,0);
+        color:$white;
+        top:0;
+        left:0;
+        height: .5rem;
+        width: 3rem;
+        border:none;
+      }
+    }
+    .sms-login{
+      margin: 0px;
+      color:$gray-lighter;
+      &.sms-login-left{
+        float: left;
+        padding-left: 30px;
+      }
+      &.sms-login-right{
+        float: right;
+        padding-right: 30px;
+      }
+    }
+    .login-btn{
+      color:$white;
+      width: 3rem;
+      height: .5rem;
+      margin-top: .40rem;
+      background: $orange-dark;
+      border-radius: .4rem;
+      border:none;
+      outline: none;
+      &:disabled{
+        background-color: $black-lightest;
+        cursor:not-allowed;
+      }
+    }
+    .reg-btn{
+      color:$orange-dark;
+      width: 3rem;
+      height: .5rem;
+      margin-top: .1rem;
+      background: rgba(0,0,0,0);
+      border:1px solid $orange-dark;
+      border-radius: .4rem;
+      outline: none;
+    }
+  }
+}
+
+.home-box{
+  font-size: .2rem;
+  color:$white;
+  width: 100%;
+  padding-bottom: .9rem;
+  .cate-item{
+    position: relative;
+    display: block;
+    //width: 3.55rem;
+    height: 1.2rem;
+    background-size: cover;
+    color:$white;
+    margin-bottom: .1rem;
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* filter: brightness(.8); */
+    }
+    span{
+      position: absolute;
+      top:.1rem;left:.1rem;
+    }
+  }
+}
+
+
+
+.goods-detail-header{
+  height: 3.8rem;
+  overflow: hidden;
+  .item{
+    height: 3.8rem;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.goods-detail{
+  font-size: .16rem;
+  padding-bottom: $navbar-height;
+  .info{
+    position: relative;
+    height: 1.3rem;
+    padding: .15rem;
+    .title{
+      line-height: 1.2;
+      height: .4rem;
+      overflow: hidden;
+      margin-bottom: .1rem;
+    }
+    .price{
+      line-height: 1.2;
+      margin-bottom: .1rem;
+    }
+    .price{
+      font-size: .24rem;
+      color:$orange-dark;
+    }
+    .m-price,.freight{
+      font-size: .14rem;
+      color:#666;
+    }
+    .freight{
+      position: absolute;
+      right:.15rem;
+      bottom:.15rem;
+    }
+  }
+  .detail{
+    .title{
+      height: .3rem;
+      font-size: .14rem;
+      padding-left:.15rem;
+      line-height: .3rem;
+      background: #f9f9f9;
+      border-top: 1px solid $gray-lighter;
+      border-bottom: 1px solid $gray-lighter;
+    }
+    .desc{
+      position: relative;
+      padding: .15rem;
+      color:$black-light;
+      p{
+        margin: 0;
+        line-height: 1.5;
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .goods-detail-footer{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: $tabbar-height;
+    border-top:1px solid $gray-lighter;
+    background: #f9f9f9;
+    padding:0 .15rem;
+    display: flex;
+    .price{
+      font-size: .2rem;
+      color:$orange-dark;
+      line-height: $tabbar-height;
+    }
+    .tips{
+      padding-left: .1rem;
+      font-size: .12rem;
+      flex: 1;
+      line-height: $tabbar-height;
+      color:#999;
+    }
+    .pay-btn{
+      display: inline-block;
+      text-align: center;
+      font-size: .15rem;
+      width: .8rem;
+      height: .3rem;
+      line-height: .3rem;
+      background: $orange-dark;
+      border-radius: .37rem;
+      border:none;
+      color:$white;
+      margin-top: .1rem;
+    }
+  }
+
+}
+
+.firmorder-box{
+  font-size: .14rem;
+  .address-select{
+    background-color: $white;
+    position: relative;
+    height: .9rem;
+    padding: 0 .4rem;
+    border-top:1px solid $black-lightest;
+    border-bottom:1px solid $black-lightest;
+    .t-icon-address{
+      position: absolute;
+      left:.13rem;
+      top:.4rem;
+    }
+    .t-icon-arrow-right{
+      position: absolute;
+      right:.16rem;
+      top:.4rem;
+    }
+    .content{
+      font-size: .13rem;
+      p{
+        position: relative;
+        margin: 0;
+        line-height: 1.5;
+        margin-top: .1rem;
+        margin-bottom: .1rem;
+        max-height: .4rem;
+        overflow: hidden;
+      }
+      .name-phone{
+        font-size: .14rem;
+      }
+      .phone{
+        float: right;
+      }
+    }
+    .address-notice{
+      margin: 0;
+      height: 100%;
+      line-height: .9rem;
+      font-size: .16rem;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: underline;
+      color:$orange-dark;
+    }
+  }
+
+  .firmorder-content{
+    width: 100%;
+    padding-bottom: .49rem;
+  }
+  .goods-item{
+    height: 1.25rem;
+    padding: .1rem;
+    display: flex;
+    border-bottom:1px solid $black-lightest;
+    background: $white;
+    .goods-img{
+      width: 1rem;
+      border-radius: .1rem;
+      border:1px solid $orange-dark;
+    }
+    .goods-info{
+      flex:1;
+      padding: .05rem .1rem;
+      p{
+        margin: 0;
+        line-height: 1.5;
+        margin-bottom: .05rem;
+      }
+      .price-num{
+        font-size: .15rem;
+      }
+      .num{
+        font-size: .12rem;
+        line-height: 2;
+        float: right;
+      }
+      .amount{
+        float: right;
+        em{
+          font-style: normal;
+          font-size: .2rem;
+          color:$orange-dark;
+        }
+      }
+    }
+  }
+  .coupon{
+    margin-top: .2rem;
+    padding: .1rem;
+    font-size: .15rem;
+    text-align: center;
+    label{
+      text-align: left;
+      display: block;
+      margin-bottom: .2rem;
+    }
+    .coupon-input{
+      width:100%;
+      height: .33rem;
+      border:1px solid $orange-dark;
+      border-radius: .04rem;
+      padding: 0 .05rem;
+    }
+  }
+  .convert-btn{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: $tabbar-height;
+    line-height: 1;
+    background: $orange-dark;
+    color:$white;
+    border:none;
+    outline:none;
+  }
+  .address-select-box{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    transform:translateX(-10rem);
+    transition:all 1s;
+    overflow-y: scroll;
+    &.active{
+      transform:translateX(0);
+    }
+    .newaddress-link{
+      display: block;
+      text-align: center;
+      font-size: .18rem;
+      margin-top: .2rem;
+      color:$orange-dark;
+      text-decoration: underline;
+    }
+  }
+
+}
+
+.price-diff-modal{
+  padding: .15rem;
+  font-size: .15rem;
+  p{
+    line-height: 2.5;
+    margin-bottom: .15rem;
+  }
+  .cancel,.ok{
+    width: 1.5rem;
+    height: .33rem;
+    border:none;
+    border-radius: .04rem;
+    outline: none;
+  }
+  .cancel{
+    background: $black-lightest;
+    margin-right: .05rem;
+    color:$black-light;
+  }
+  .ok{
+    background: $orange-dark;
+    color:$white;
+  }
+}
+
+.convert-success-modal{
+  padding: .15rem;
+  font-size: .15rem;
+  p{
+    line-height: 2.5;
+    text-indent: 2em;
+    margin-bottom: .3rem;
+  }
+  button{
+    background: $orange-dark;
+    color:$white;
+    border-radius: .04rem;
+    height: .33rem;
+    width: 100%;
+    border:none;
+    outline: none;
+  }
+}
+
+.extra-price-box{
+  font-size: .14rem;
+  .switch-voucher-box{
+    padding: 0 .1rem;
+    height: .49rem;
+    line-height: .49rem;
+    border-top:1px solid $black-lightest;
+    border-bottom:1px solid $black-lightest;
+    background-color: $white;
+  }
+  .switch-voucher{
+    float: right;
+    margin-top: .12rem;
+  }
+  .vouchers-select{
+    height: .49rem;
+    line-height: .49rem;
+    background-color: $white;
+    text-align: center;
+    padding:  0 .1rem;
+    a{
+      color:$orange-dark;
+      text-decoration:underline;
+    }
+    .left{
+      float: left;
+    }
+    .right{
+      float: right;
+    }
+  }
+  .pay-btn{
+    width: 90%;
+    height: .44rem;
+    background: $orange-dark;
+    color:$white;
+    margin-left:5%;
+    margin-top: .46rem;
+    border-radius: .04rem;
+    border:none;
+    font-size: .17rem;
+  }
+  .vouchers-select-box{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    transform:translateX(-10rem);
+    transition:all 1s;
+    overflow-y: scroll;
+    &.active{
+      transform:translateX(0);
+    }
+    .newaddress-link{
+      display: block;
+      text-align: center;
+      font-size: .18rem;
+      margin-top: .2rem;
+      color:$orange-dark;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.userinfo-box{
+  font-size: .15rem;
+  .userinfo-list{
+    border-top:1px solid $black-lightest;
+    border-bottom:1px solid $black-lightest;
+    padding: 0 .1rem;
+    background-color: $white;
+    .item{
+      position: relative;
+      height: .6rem;
+      line-height: .6rem;
+      border-bottom:1px solid $black-lightest;
+      &:last-child{
+        border-bottom:none;
+      }
+      a{
+        display: block;
+      }
+      i.right{
+        top:.2rem;
+      }
+      .right{
+        position: absolute;
+        right:0;
+        color:$black-lighter;
+      }
+      .title{
+        margin-left: .2rem;
+        color:$black-lighter;
+      }
+    }
+  }
+}
+
+.user-address-box {
+  font-size: .16rem;
+  .address-list{
+    border-top:1px solid $black-lightest;
+    padding: 0;
+    background-color: $white;
+    padding-bottom: 1rem;
+  }
+  .address-item{
+    height: .8rem;
+    display: flex;
+    border-bottom:1px solid $black-lightest;
+    &.active{
+      .delete i{
+        display: inline-block;
+      }
+      .right i{
+        display: none;
+      }
+    }
+  }
+  .address-item-link{
+    display: flex;
+    flex: 1;
+  }
+  .delete{
+    padding:0 .1rem;
+    height: .8rem;
+    line-height: .8rem;
+    i{
+      display: none;
+    }
+  }
+  .content{
+    flex: 1;
+    padding: .1rem 0;
+    p{
+      margin-bottom: 0.1rem;;
+      display: flex;
+      line-height: 1.5;
+    }
+  }
+  .right{
+    padding: 0 .1rem;
+    height: .8rem;
+    line-height: .8rem;
+  }
+  .name{
+    flex:1;
+    font-size: .15rem;
+  }
+  .phone{
+    flex:1;
+    font-size: .14rem;
+    color:$black-light;
+    text-align: right;
+  }
+  .address{
+    font-size: .13rem;
+    color:$black-lighter;
+    span{
+      margin-right:5px;
+    }
+  }
+  .isdefault{
+    color: $orange-dark;
+    margin-right: .05rem;
+  }
+  .new-address{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    background-color: $orange-dark;
+    height: $tabbar-height;
+    line-height: $tabbar-height;
+    color:$white;
+    border:none;
+    outline: none;
+  }
+
+}
+
+
+.edit-address-box{
+  font-size: .14rem;
+  .edit-list{
+    padding: 0 .1rem;
+    border-top:1px solid $black-lightest;
+    border-bottom:1px solid $black-lightest;
+    background-color: $white;
+    margin: 0;
+    li{
+      position: relative;
+      list-style: none;
+      height: .55rem;
+      line-height: .55rem;
+      border-bottom:2px solid $black-lightest;
+      &:last-child{
+        border:none;
+      }
+      input{
+        width: 100%;
+        height: 100%;
+        padding-left: 1rem;
+      }
+      .left{
+        position: absolute;
+        top:.18rem;
+        left:.1rem;
+      }
+      .title{
+        position: absolute;
+        color:$black-light;
+        left:.45rem;
+        font-size: .15rem;
+      }
+      .right{
+        position: absolute;
+        right:0;
+        color:$black-lighter;
+        i{
+          margin-left: .05rem;
+        }
+      }
+    }
+  }
+  .set-default{
+    padding: .25rem;
+    input{
+      margin-right: .1rem;
+    }
+  }
+}
+
+.ReactIScroll_clearBottom{
+  border-bottom: 50px solid #f7f7f9;
+}
+
+.order-list-box{
+  font-size:.12rem;
+  .order-list{
+    padding: 0;
+    width: 100%;
+    padding-bottom: .4rem;
+    overflow: hidden;
+    &.divFh_shrText_order-list{
+      margin-bottom: 0;
+      padding-bottom: 0;
+      .order-item{
+        margin-bottom: 0;
+        border-bottom:0;
+      }
+      .item-image{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .order-item{
+    display: flex;
+    padding: .2rem .1rem .1rem;
+    list-style: none;
+    border-top:1px solid $black-lightest;
+    border-bottom:1px solid $black-lightest;
+    margin-bottom: .1rem;
+    background-color: $white;
+  }
+  .item-image{
+    width: 1rem;
+    height: 1rem;
+    margin: 0 .08rem;
+  }
+  .center{
+    width: 1.6rem;
+  }
+  .right{
+    flex:1;
+    text-align: right;
+    span{
+      display: block;
+    }
+  }
+  .name{
+    font-size: .14rem;
+    line-height: 1.5;
+    margin-bottom: .4rem;
+    height: .4rem;
+    overflow: hidden;
+  }
+  .time{
+    color:$black-lighter;
+  }
+  .price{
+    font-size: .18rem;
+    line-height: 1.5;
+  }
+  .freight{
+    color:$black-light;
+    margin-top: .1rem;
+  }
+  .num{
+    color:$black-lighter;
+    margin-top:.1rem;
+  }
+  .opra-btn{
+    border:1px solid $orange-dark;
+    color:$orange-dark;
+    border-radius: .04rem;
+    background-color: $white;
+    height: .2rem;
+    margin-top: .1rem;
+    outline: none;
+  }
+}
+
+.order-cencel-box{
+  font-size:.16rem;
+  .textarea{
+    position: relative;
+    padding: .1rem;
+    textarea{
+      width: 100%;
+      height: 2.05rem;
+      resize: none;
+      outline: none;
+      border:1px solid $black-lightest;
+      border-radius: .04rem;
+      padding: .1rem;
+    }
+    em{
+      font-style: normal;
+    }
+    span{
+      position: absolute;
+      bottom:.2rem;
+      right:.2rem;
+      color:$black-light;
+    }
+  }
+
+}
+.coupons-list{
+  position: relative;
+  width: 100%;
+  padding: .16rem;
+  padding-bottom: 1rem;
+}
+.coupons-item-box{
+  list-style: none;
+  display: flex;
+  height: 1.27rem;
+  margin-bottom: .2rem;
+  &.isedit{
+    .item-check{
+      transform: translateX(.6rem);
+    }
+    .coupons-item{
+      transform: translateX(.5rem);
+    }
+  }
+}
+.coupons-item{
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-image: url(/imgs/coupons.png);
+  background-size: cover;
+  height: 1.27rem;
+  transition: all .5s;
+  &.active{
+    background-image: url(/imgs/coupons-active.png);
+  }
+  .left{
+    position: relative;
+    flex:1;
+    padding: .2rem  0  .2rem .15rem ;
+  }
+  .right{
+    width: 1.28rem;
+    font-size: .1rem;
+    padding: .15rem .1rem;
+    text-align: center;
+  }
+  .price{
+    position: relative;
+    display: inline-block;
+    font-size: .35rem;
+    color:$white;
+    line-height: 1.5;
+  }
+  .chinasarft_name{
+    position: absolute;
+    right: .1rem;
+    top:.12rem;
+    font-style: normal;
+    font-size: .1rem;
+    vertical-align: top;
+    background-color: $black-light;
+    padding: .02rem .1rem;
+    border-radius: .04rem;
+    color:$white;
+  }
+  .cardno{
+    display: block;
+    color:$white;
+    padding: 0 .1rem;
+  }
+  .expirydate{
+    color:$black-light;
+    line-height: 1.5;
+    border-bottom:1px solid $black-lightest;
+    padding-bottom: .02rem;
+    margin: .05rem;
+    span{
+      display: block;
+    }
+
+  }
+  .usenow-btn{
+    color:red;
+    &.active{
+      &:after{
+        content:">"
+      }
+    }
+  }
+  .state-tag{
+    position: absolute;
+    width: .76rem;
+    left:1.8rem;
+    top:.2rem;
+  }
+  .expirydate-tag{
+    position: absolute;
+    background-color: $orange-dark;
+    left:.4rem;
+    top:-.03rem;
+    color:$white;
+    padding: .03rem .15rem;
+    border-radius: .1rem;
+    font-size: .1rem;
+
+  }
+}
+
+.invalid-coupons{
+  position: fixed;
+  bottom:0;
+  left:0;
+  width: 100%;
+  text-align: center;
+  background-color:$orange-dark;
+  height: $tabbar-height;
+  line-height: $tabbar-height;
+  color:$white;
+  font-size: .17rem;
+}
+
+
+.coupons-list-box {
+  font-size: .14rem;
+  .item-check{
+    left:-.4rem;
+    position: absolute;
+    width: .4rem;
+    line-height: 1.27rem;
+    transition: all .5s;
+    .ckeckbox{
+      position: relative;
+      width: .2rem;
+      height: .2rem;
+      display: inline-block;
+      line-height: .25rem;
+      border:1px solid $brand-danger;
+      border-radius: .2rem;
+    }
+    &.active{
+      .ckeckbox:after{
+        position: absolute;
+        display: inline-block;
+        width: .12rem;
+        height: .12rem;
+        border-radius: .12rem;
+        content: '';
+        background-color:$brand-danger;
+        top:.03rem;
+        left:.03rem;
+      }
+    }
+  }
+  .use-modal{
+    padding: .2rem .2rem;
+    font-size: .15rem;
+    .btn-box{
+      display: flex;
+      margin-top: .4rem;
+    }
+    .exchange{
+      border:1px solid $orange-dark;
+      border-radius: .05rem;
+      background-color: $white;
+      color:$black-light;
+      width: 1.5rem;
+      height: .33rem;
+      margin-right: .05rem;
+    }
+    .insure{
+      border:1px solid $orange-dark;
+      border-radius: .05rem;
+      background-color: $orange-dark;
+      color:$white;
+      width: 1.5rem;
+      height: .33rem;
+      margin-left: .05rem;
+    }
+  }
+  .qr-box{
+    text-align: center;
+  }
+  .re_gifte{
+    text-align: center;
+    input{
+      border:1px solid #ccc;
+      height: .3rem;
+      border-radius: 5px;
+      padding: 0 5px;
+    }
+    .re_gifte_btn{
+      border:none;
+      background-color: $orange-dark;
+      color:$white;
+      border-radius: 5px;
+      height: .3rem;
+      margin-top: .2rem;
+      width: 1rem;
+    }
+  }
+}
+
+.points-logs-box{
+  font-size: .12rem;
+  .points-logs-list{
+    padding: 0 .1rem;
+    color:$black-light;
+    background-color: $white;
+    .points-logs-item{
+      position: relative;
+      height: .72rem;
+      border-bottom: 1px solid $black-lightest;
+      .title{
+        line-height: 2;
+        font-size: .19rem;
+      }
+      .time{
+        margin: 0;
+        margin-top: .15rem;
+        color:$black-lighter;
+      }
+      .log-num{
+        position: absolute;
+        right:0;
+        top:.25rem;
+        font-size: .22rem;
+        color:red;
+        &.active{
+          color:#2371FF;
+        }
+      }
+    }
+  }
+}
+
+.policies-list-box{
+  font-size: .14rem;
+  .policies-list{
+    background-color: $white;
+    padding: 0 .1rem;
+  }
+  .policies-item{
+    height: .72rem;
+    p{
+      margin: 0;
+    }
+    .name{
+      font-size: .18rem;
+      line-height: 1.8;
+    }
+    .phone{
+      font-size: .16rem;
+      margin-left: .1rem;
+    }
+    .license_plate{
+      float: right;
+      line-height: 2;
+    }
+    .car_type{
+      font-size: .12rem;
+    }
+    .vci,.tci{
+      font-size: .12rem;
+      margin-left: .1rem;
+    }
+    .time{
+      font-size: .14rem;
+      line-height: 2.5;
+    }
+    .amount{
+      font-size: .21rem;
+      color:$orange-dark;
+      float: right;
+      margin-top: -.3rem;
+    }
+  }
+}
+
+
+
+.clear{
+  clear: both;
+}
+.clear:before,.clear:after{
+  content:"";
+  display:table;
+}
+.clear:after{clear:both;}
